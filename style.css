@@ -1,0 +1,303 @@
+/* RESET */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Inter', sans-serif;
+  background:#F7F4ED;
+  color:#123524;
+  line-height:1.6;
+}
+
+/* CONTAINER */
+
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+
+/* NAVBAR */
+
+.navbar{
+  background:#F7F4ED;
+  padding:20px 0;
+  border-bottom:1px solid #ddd;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.nav-container{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-family:'Cormorant Garamond', serif;
+  font-size:2rem;
+  font-weight:700;
+}
+
+.nav-links{
+  display:flex;
+  gap:30px;
+  list-style:none;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:#123524;
+  font-weight:500;
+  transition:.3s;
+}
+
+.nav-links a:hover{
+  color:#5b7c63;
+}
+
+/* HERO */
+
+.hero{
+  position:relative;
+  height:80vh;
+  background:url('https://i.imgur.com/P369SAj.png') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.45);
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  color:white;
+}
+
+.hero h1{
+  font-family:'Cormorant Garamond', serif;
+  font-size:5rem;
+  margin-bottom:10px;
+}
+
+.hero p{
+  font-size:1.3rem;
+}
+
+/* SECTION SPACING */
+
+section{
+  padding:70px 0;
+}
+
+/* WELCOME */
+
+.welcome-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.welcome-image img{
+  width:100%;
+  border-radius:25px;
+}
+
+.welcome-text h2{
+  font-family:'Cormorant Garamond', serif;
+  font-size:5rem;
+  margin-bottom:20px;
+}
+
+.welcome-text p{
+  font-size:1.1rem;
+  max-width:500px;
+}
+
+/* COMMUNITY */
+
+.community-section{
+  background:#EFE9DE;
+}
+
+.community-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.community-image img{
+  width:100%;
+  border-radius:25px;
+}
+
+.community-text h2{
+  font-family:'Cormorant Garamond', serif;
+  font-size:4.5rem;
+  line-height:1;
+  margin-bottom:25px;
+}
+
+.community-text p{
+  margin-bottom:20px;
+  font-size:1.05rem;
+}
+
+/* SECTION TITLES */
+
+.section-title{
+  font-family:'Cormorant Garamond', serif;
+  font-size:4.5rem;
+  margin-bottom:40px;
+}
+
+/* EVENTS */
+
+.events-section{
+  background:#DCE8C6;
+}
+
+.events-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+.event-card{
+  background:white;
+  border-radius:25px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  transition:.3s;
+}
+
+.event-card:hover{
+  transform:translateY(-5px);
+}
+
+.event-card img{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+}
+
+.event-content{
+  padding:25px;
+}
+
+.event-date{
+  color:#5b7c63;
+  margin-bottom:10px;
+}
+
+.event-content h3{
+  font-family:'Cormorant Garamond', serif;
+  font-size:2rem;
+  margin-bottom:20px;
+}
+
+.event-content button{
+  background:#123524;
+  color:white;
+  border:none;
+  padding:12px 24px;
+  border-radius:50px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.event-content button:hover{
+  background:#1e4a35;
+}
+
+/* TESTIMONIALS */
+
+.testimonials-section{
+  background:#F7F4ED;
+}
+
+.testimonial-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+}
+
+.testimonial-card{
+  background:white;
+  padding:40px;
+  border-radius:25px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.testimonial-card p{
+  font-size:1.2rem;
+  margin-bottom:25px;
+}
+
+.testimonial-card h4{
+  font-size:1rem;
+}
+
+/* FOOTER */
+
+footer{
+  background:#DCE8C6;
+  padding:50px 0;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:40px;
+}
+
+footer h3{
+  font-family:'Cormorant Garamond', serif;
+  font-size:2rem;
+  margin-bottom:15px;
+}
+
+footer p{
+  margin-bottom:10px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+  .welcome-grid,
+  .community-grid,
+  .events-grid,
+  .testimonial-grid,
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    font-size:3.5rem;
+  }
+
+  .welcome-text h2,
+  .community-text h2,
+  .section-title{
+    font-size:3rem;
+  }
+
+  .nav-links{
+    display:none;
+  }
+
+}
